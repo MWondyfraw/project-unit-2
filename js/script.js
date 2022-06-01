@@ -7,7 +7,9 @@ FSJS Project 2 - Data Pagination and Filtering
 /*
 Create the `showPage` function
 This function will create and insert/append the elements needed to display a "page" of nine students
+Add the startIndex & endIndex to the function
 */
+
 
 function showPage(list, page) {
    let startIndex = (page  * 9) - 9;
