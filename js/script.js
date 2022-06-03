@@ -40,11 +40,11 @@ function showPage(list, page) {
 
 /*
 Create the `addPagination` function
-This function will create and insert/append the elements needed for the pagination buttons
+This function will create and insert the elements needed for the pagination buttons
 */
 function addPagination(list) {
    let numofPages = Math.ceil(list.length / 9);
-   let linkList= document.querySelector('link-list');
+   let linkList= document.querySelector('.link-list');
    addPagination.innerHTML = "linkList"
    for (let i = 1; i <= numofPages; i++) {
       button = `<li><button type="button">${i}</button></li>`;
@@ -52,8 +52,8 @@ function addPagination(list) {
       firstButton = document.querySelector('button');
       firstButton.className = 'active';
       linkList.addEventListener('click', (e) => {
-         if (e.target.tagName ==='Button') {
-         activeButton = document.querySelector('active');
+         if (e.target.tagName ==='BUTTON') {
+         activeButton = document.querySelector('.active');
          activeButton.className = ''; 
          e.target.className = 'active';
          showPage(list, e.target.textContent);
